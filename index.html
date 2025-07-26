@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suriyaprakash & Sisira - Engagement</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>💍 Suriyaprakash & Sisira 💍</h1>
+        <p class="tagline">Two Hearts, One Promise</p>
+        <div id="countdown"></div>
+        <audio controls autoplay loop hidden>
+            <source src="song.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <section class="section love-story">
+        <h2>Our Love Story</h2>
+        <div class="heart-story">
+            <img src="couple1.jpg" alt="Couple" class="heart-pic" />
+            <p>A beautiful journey from friendship to forever. This is our story filled with smiles, late-night talks, and endless memories.</p>
+        </div>
+    </section>
+
+    <section class="section location">
+        <h2>📍 Venue</h2>
+        <img src="hall.jpg" alt="Marriage Hall" class="hall-pic" />
+        <p><a href="https://maps.google.com/?q=Sri Vasavi Marriage Hall, Thirumarugal" target="_blank">Open in Google Maps</a></p>
+    </section>
+
+    <section class="section food">
+        <h2>🍽️ Delicious Menu</h2>
+        <img src="food.jpg" alt="Food Menu" class="food-pic" />
+        <p>Enjoy a variety of South Indian delicacies made with love and tradition.</p>
+    </section>
+
+    <section class="section photos">
+        <h2>📸 Event Photos</h2>
+        <p>Photos will be shared here after the event. Stay tuned!</p>
+    </section>
+
+    <footer>
+        <p>With love, Kumar & Vijayalakshmi, Raveendran & Syamala</p>
+    </footer>
+
+    <script>
+        const countdown = document.getElementById("countdown");
+        const eventDate = new Date("2025-08-24T18:00:00").getTime();
+
+        const timer = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                countdown.innerHTML = "It's Today! 🎉";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
