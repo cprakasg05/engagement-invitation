@@ -1,58 +1,80 @@
+/* style.css */
 
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(45deg, #fbeaff, #e1f5ff);
-    color: #333;
-    text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fffdf7;
+  color: #333;
 }
 
-.container {
-    padding: 40px 20px;
+.header {
+  background: linear-gradient(to right, #fbd3e9, #bb377d);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: #c0392b;
+.language-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
-.tagline {
-    font-size: 1.2rem;
-    margin-top: -10px;
-    margin-bottom: 20px;
-    color: #555;
+.language-toggle button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+  border: none;
+  background: #fff;
+  color: #bb377d;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.countdown {
+  font-size: 2rem;
+  margin-top: 1rem;
 }
 
 .section {
-    padding: 30px 15px;
-    margin-top: 20px;
+  padding: 2rem;
+  text-align: center;
 }
 
-.heart-story, .location, .food, .photos {
-    background: #fff;
-    border-radius: 20px;
-    margin: 0 auto 20px;
-    max-width: 500px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 20px;
+.section-title {
+  font-size: 1.8rem;
+  color: #bb377d;
+  margin-bottom: 1rem;
 }
 
-.heart-pic, .hall-pic, .food-pic {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
+.food-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
 }
 
-a {
-    text-decoration: none;
-    color: #2c3e50;
-    font-weight: bold;
+.food-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.5rem;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
-footer {
-    padding: 20px;
-    background: #f2f2f2;
-    margin-top: 40px;
-    font-size: 0.9rem;
-    color: #777;
+.food-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.food-name {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.footer-note {
+  color: #888;
+  font-style: italic;
 }
