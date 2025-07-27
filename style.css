@@ -1,10 +1,10 @@
 body {font-family:'Segoe UI',sans-serif;margin:0;background:#fff0f5;color:#333;text-align:center;}
 .hero{padding:2rem 1rem 1rem 1rem;background:linear-gradient(135deg,#ffe4e1 70%,#f0c2c2 100%);margin-bottom:20px;}
 .couple-stack{display:flex;flex-direction:column;align-items:center;margin:1.3em 0 1.2em 0;}
-.couple-top{font-family:'La Belle Aurore',cursive;font-size:2.3em;color:#6a15a8;letter-spacing:2px;}
+.couple-top{font-family:'La Belle Aurore',cursive;font-size:4.3em;color:#6a15a8;letter-spacing:3px;}
 .heart-row{margin:0.1em 0 0.16em 0;}
-.heart{font-size:2.0em;line-height:1.1;color:#d63384;}
-.couple-bottom{font-family:'La Belle Aurore',cursive;font-size:2em;letter-spacing:2px;color:#6a15a8;}
+.heart{font-size:2.0em;line-height:1.1;color:#ffc0cb;}
+.couple-bottom{font-family:'La Belle Aurore',cursive;font-size:4.3em;letter-spacing:3px;color:#6a15a8;}
 .sections{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin:1.5rem 0 2.5rem 0;}
 .section-btn{min-width:135px;margin:0 3px;padding:14px 20px;background:#ff69b4;color:#fff;text-decoration:none;border-radius:24px;font-weight:bold;font-size:1.13rem;box-shadow:0 3px 12px rgba(215,51,132,0.09);transition:background 0.2s;}
 .section-btn:hover{background:#c2185b;}
