@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Suriyaprakash ❤️ Sisira – Engagement Invite</title>
+  <title>Engagement Invitation: Suriyaprakash & Sisira</title>
   <link rel="stylesheet" href="style.css"/>
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="language-toggle">
-    <button onclick="setLanguage('en')">English</button>
-    <button onclick="setLanguage('ta')">தமிழ்</button>
-    <button onclick="setLanguage('ml')">മലையாளം</button>
+  <div class="top-bar">
+    <span></span>
+    <div class="language-toggle">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('ta')">தமிழ்</button>
+      <button onclick="setLanguage('ml')">മലയാളം</button>
+    </div>
   </div>
   <div class="hero">
-    <h1 id="couple-name">Suriyaprakash ❤️ Sisira</h1>
+    <h1>Suriyaprakash ❤️ Sisira</h1>
     <p id="countdown"></p>
-    <audio controls autoplay loop>
-      <source src="https://drive.google.com/uc?export=download&id=1ceqO4uucsbJnyXjR1f6lAQeAMnYML2Tj" type="audio/mp3"/>
-    </audio>
   </div>
   <div class="sections">
     <a href="story.html" class="section-btn" data-key="couple">Couple Story</a>
     <a href="venue.html" class="section-btn" data-key="venue">Venue Details</a>
     <a href="food.html" class="section-btn" data-key="food">Food Menu</a>
     <a href="photo.html" class="section-btn" data-key="photos">Photos</a>
+  </div>
+  <div id="audio-control-wrap">
+    <audio id="bg-music" loop autoplay>
+      <source src="asset/bg-music.mp3" type="audio/mp3">
+    </audio>
+    <button id="mute-btn" aria-label="Mute/Unmute">&#128266;</button>
   </div>
 </body>
 </html>
