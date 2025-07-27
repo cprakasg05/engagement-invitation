@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Engagement Invitation: Suriyaprakash & Sisira</title>
   <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -18,7 +18,11 @@
     </div>
   </div>
   <div class="hero">
-    <h1 class="super-couple" data-key="welcome">Suriyaprakash <span class="heart">❤️</span> Sisira</h1>
+    <div class="couple-stack">
+      <span class="couple-top" data-key="name1">Suriyaprakash</span>
+      <span class="heart-row"><span class="heart">❤️</span></span>
+      <span class="couple-bottom" data-key="name2">Sisira</span>
+    </div>
     <p id="countdown"></p>
   </div>
   <div class="sections">
@@ -27,16 +31,15 @@
     <a href="food.html" class="section-btn" data-key="food">Food Menu</a>
     <a href="photo.html" class="section-btn" data-key="photos">Photos</a>
   </div>
-  <div class="with-love">
-    With love,<br>
-    Kumar & Vijayalakshmi, Raveendran & Syamala
-  </div>
-  <!-- Music/mute controller -->
   <div id="audio-control-wrap">
     <audio id="bgMusic" autoplay loop>
       <source src="asset/bg-music.mp3" type="audio/mp3">
     </audio>
     <button id="muteButton" aria-label="Mute/Unmute">&#128266;</button>
+  </div>
+  <div class="with-love" data-key="withlove">
+    With love,<br>
+    Kumar & Vijayalakshmi, Raveendran & Syamala
   </div>
 </body>
 </html>
