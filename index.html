@@ -1,152 +1,32 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Suriyaprakash ❤️ Sisira Engagement</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suriyaprakash ❤️ Sisira – Engagement Invite</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="language-toggle">
     <button onclick="setLanguage('en')">English</button>
     <button onclick="setLanguage('ta')">தமிழ்</button>
     <button onclick="setLanguage('ml')">മലയാളം</button>
-  </div>  <header>
-    <h1 id="main-title">Suriyaprakash ❤️ Sisira</h1>
-    <p id="engagement-text">We're Getting Engaged!</p>
-    <div class="countdown">
-      <span id="days">00</span> days
-      <span id="hours">00</span> hours
-      <span id="minutes">00</span> mins
-      <span id="seconds">00</span> secs
-    </div>
-    <audio id="bg-music" autoplay loop>
-      <source src="https://docs.google.com/uc?export=open&id=1yMmCU-6f0Nc15wt9O_RxR2qMLlf54Vht" type="audio/mpeg">
+  </div>
+
+  <div class="hero">
+    <h1 id="couple-name">Suriyaprakash ❤️ Sisira</h1>
+    <p id="countdown"></p>
+    <audio controls autoplay loop>
+      <source src="https://drive.google.com/uc?export=download&id=1YZcytUq8uQ5RqpZNBZ5uzQRyI6ow5tY0" type="audio/mp3"/>
     </audio>
-  </header>  <section class="love-story">
-    <h2 data-key="story_title">Our Story</h2>
-    <div class="story-heart">
-      <img src="https://docs.google.com/uc?export=open&id=1uMRYuRxJSRPjWHnAJ-AG6DhgiTMSMR6s" alt="Couple Photo" />
-      <p data-key="story_desc">
-        Two hearts, two lives, one love story. Join us in celebrating the beginning of our forever.
-      </p>
-    </div>
-  </section>  <section class="location">
-    <h2 data-key="location_title">Location</h2>
-    <a href="https://maps.app.goo.gl/woLVxkjna7mn3BiF7" target="_blank">
-      <img src="https://docs.google.com/uc?export=open&id=1Te-Vs-Vp0nXN6HqnaQRbBVO__Ij73pou" alt="Marriage Hall" class="location-img"/>
-      <p data-key="location_click">Click to view in Google Maps</p>
-    </a>
-  </section>  <section class="food-menu">
-    <h2 data-key="food_title">Special Menu</h2>
-    <div class="food-grid">
-      <div class="food-item">
-        <img src="https://docs.google.com/uc?export=open&id=1Te-Vs-Vp0nXN6HqnaQRbBVO__Ij73pou" />
-        <p data-key="food_1">Ashoka Halwa</p>
-      </div>
-      <div class="food-item">
-        <img src="https://docs.google.com/uc?export=open&id=1uMRYuRxJSRPjWHnAJ-AG6DhgiTMSMR6s" />
-        <p data-key="food_2">Kara Paniyaram</p>
-      </div>
-      <div class="food-item">
-        <img src="https://docs.google.com/uc?export=open&id=10dV14XR4nNllAA-4jdCTYnMbTMpKP3rf" />
-        <p data-key="food_3">Beetroot Idiyappam</p>
-      </div>
-      <div class="food-item">
-        <img src="https://docs.google.com/uc?export=open&id=1j8tOFh_kbmjUCJ3uju5Pqtx2rjRfw4jy" />
-        <p data-key="food_4">Keerai Adai</p>
-      </div>
-      <div class="food-item">
-        <img src="https://docs.google.com/uc?export=open&id=10Bc9pbmdV_g3Xn6qS3VFCHCZbpojq4p8" />
-        <p data-key="food_5">Chapathi</p>
-      </div>
-      <div class="food-item">
-        <img src="https://docs.google.com/uc?export=open&id=1lMQ3xuAs-ANji_ok7us8AfKtvEECnvuR" />
-        <p data-key="food_6">Curd Rice</p>
-      </div>
-      <div class="food-item">
-        <img src="https://docs.google.com/uc?export=open&id=12ICM_-9Lb3yxBvtbOoBpyb4cp_mo4Mnw" />
-        <p data-key="food_7">Idli</p>
-      </div>
-      <div class="food-item">
-        <img src="https://docs.google.com/uc?export=open&id=1yloC0D0f74oHk-OvVymnRR79tBVxqY6n" />
-        <p data-key="food_8">Masala Paal</p>
-      </div>
-    </div>
-  </section>  <section class="photo-gallery">
-    <h2 data-key="photos_title">Celebration Photos</h2>
-    <p data-key="photos_coming">Photos will be shared here after the event 🎉</p>
-  </section>  <script>
-    const languages = {
-      en: {
-        story_title: "Our Story",
-        story_desc: "Two hearts, two lives, one love story. Join us in celebrating the beginning of our forever.",
-        location_title: "Location",
-        location_click: "Click to view in Google Maps",
-        food_title: "Special Menu",
-        food_1: "Ashoka Halwa",
-        food_2: "Kara Paniyaram",
-        food_3: "Beetroot Idiyappam",
-        food_4: "Keerai Adai",
-        food_5: "Chapathi",
-        food_6: "Curd Rice",
-        food_7: "Idli",
-        food_8: "Masala Paal",
-        photos_title: "Celebration Photos",
-        photos_coming: "Photos will be shared here after the event 🎉"
-      },
-      ta: {
-        story_title: "எங்கள் காதல் பயணம்",
-        story_desc: "இரண்டு இதயங்கள், ஒரு காதல் கதை. எங்களுடன் இணைந்து எங்கள் பயணத்தின் தொடக்கத்தை கொண்டாடுங்கள்.",
-        location_title: "நிகழ்வு இடம்",
-        location_click: "Google Maps இல் பார்க்க கிளிக் செய்யவும்",
-        food_title: "சிறப்பு உணவுப் பட்டியல்",
-        food_1: "அசோகா அல்வா",
-        food_2: "கார பணியாரம்",
-        food_3: "பீட்ரூட் இடியாப்பம்",
-        food_4: "கீரை அடை",
-        food_5: "சப்பாத்தி",
-        food_6: "தயிர் சாதம்",
-        food_7: "இட்லி",
-        food_8: "மசாலா பால்",
-        photos_title: "நிகழ்ச்சி புகைப்படங்கள்",
-        photos_coming: "நிகழ்ச்சி முடிந்ததும் புகைப்படங்கள் இங்கே பகிரப்படும் 🎉"
-      },
-      ml: {
-        story_title: "ഞങ്ങളുടെ പ്രണയകഥ",
-        story_desc: "രണ്ടു ഹൃദയങ്ങൾ, ഒരൊറ്റ പ്രണയകഥ. ഞങ്ങളുടെ പ്രണയത്തിന്റെ തുടക്കം ആഘോഷിക്കൂ.",
-        location_title: "സ്ഥലം",
-        location_click: "Google Maps ല്‍ കാണാന്‍ ക്ലിക്ക് ചെയ്യൂ",
-        food_title: "പ്രത്യേക ഭക്ഷണങ്ങള്‍",
-        food_1: "അശോക ഹല്‍വ",
-        food_2: "കര പണിയാരം",
-        food_3: "ബീറ്റ്റൂട്ട് ഇടിയപ്പം",
-        food_4: "കീര അട",
-        food_5: "ചപ്പാത്തി",
-        food_6: "തയിര് ചോറു",
-        food_7: "ഇഡ്ഡലി",
-        food_8: "മസാല പാല്‍",
-        photos_title: "പിറന്നാള്‍ ചിത്രങ്ങള്‍",
-        photos_coming: "പ്രവൃത്തി കഴിഞ്ഞ് ഫോട്ടോകള്‍ ഇവിടെ പങ്കുവെക്കപ്പെടും 🎉"
-      }
-    };
+  </div>
 
-    function setLanguage(lang) {
-      document.querySelectorAll('[data-key]').forEach(el => {
-        const key = el.getAttribute('data-key');
-        el.textContent = languages[lang][key];
-      });
-    }
-
-    const eventDate = new Date("2025-08-24T10:00:00").getTime();
-    setInterval(() => {
-      const now = new Date().getTime();
-      const distance = eventDate - now;
-
-      document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-      document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
-    }, 1000);
-  </script></body>
+  <div class="sections">
+    <a href="story.html" class="section-btn" data-key="couple">Couple Story</a>
+    <a href="venue.html" class="section-btn" data-key="venue">Venue Details</a>
+    <a href="food.html" class="section-btn" data-key="food">Food Menu</a>
+    <a href="photo.html" class="section-btn" data-key="photos">Photos</a>
+  </div>
+</body>
 </html>
