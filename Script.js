@@ -1,34 +1,19 @@
-// Countdown
-const countdown = document.getElementById("countdown");
-const targetDate = new Date("2025-08-24T18:00:00+05:30");
-function updateCountdown() {
-  if (!countdown) return;
-  const now = new Date();
-  const diff = targetDate - now;
-  if (diff <= 0) { countdown.innerText = "❤️ Today is the Big Day! ❤️"; return; }
-  const d = Math.floor(diff/8.64e7), h = Math.floor((diff%8.64e7)/3.6e6), m = Math.floor((diff%3.6e6)/6e4), s = Math.floor((diff%6e4)/1e3);
-  countdown.innerText = `${d} days ${h} hrs ${m} min ${s} sec`;
-}
-setInterval(updateCountdown, 1000); updateCountdown();
-
+// Robust translations
 const translations = {
   en: {
-    back: "Back to Home", welcome: "Suriyaprakash ❤️ Sisira", couple: "Couple Story", venue: "Venue Details", food: "Food Menu",
-    photos: "Photos",
-    menuLabel: "🍽️ Menu Highlights",
-    menu: ["Ashoka Halwa","Kara Paniyaram","Beetroot Idiyappam","Keera Adai","Chapathi","Curd Rice","Idly","Masala Milk"]
+    back:"Back to Home", withlove:"With love,\nKumar & Vijayalakshmi, Raveendran & Syamala",
+    name1:"Suriyaprakash", name2:"Sisira",
+    couple:"Couple Story", venue:"Venue Details", food:"Food Menu", photos:"Photos"
   },
   ta: {
-    back: "முதன்மை பக்கம்", welcome: "சூரியபிரகாஷ் ❤️ சிசிரா", couple: "காதல் பயணம்", venue: "திருமண இடம்", food: "சமையல் பட்டியல்",
-    photos: "புகைப்படங்கள்",
-    menuLabel: "🍽️ சிறப்பு சமையல்",
-    menu: ["அசோகா அல்வா","கார பணியாரம்","பீட்ரூட் இடியாப்பம்","கீரை அடை","சப்பாத்தி","தயிர் சாதம்","இட்லி","மசாலா பால்"]
+    back:"முதன்மை பக்கம்", withlove:"அன்புடன்,\nகுமார் & விஜயலட்சுமி, ரவீந்திரன் & சயமலா",
+    name1:"சூரியபிரகாஷ்", name2:"சிசிரா",
+    couple:"காதல் பயணம்", venue:"திருமண இடம்", food:"சமையல் பட்டியல்", photos:"புகைப்படங்கள்"
   },
   ml: {
-    back: "ഹോം പേജ്", welcome: "സൂര്യപ്രകാശ് ❤️ സിസിര", couple: "ക്യുപിള്‍ സ്‌റ്റോറി", venue: "വേദി വിശദാംശങ്ങള്‍", food: "ഭക്ഷണ പട്ടിക",
-    photos: "ഫോട്ടോകള്‍",
-    menuLabel: "🍽️ മെനു ഹൈലൈറ്റ്സ്",
-    menu: ["അശോക ഹല്‍വ","കാറ പണിയാരം","ബീറ്റ്റൂട്ട് ഇടിയപ്പം","കീര അടയ്","ചപ്പാത്തി","തൈര് റൈസ്","ഇഡ്ലി","മസാലാ പാലിന്"]
+    back:"ഹോം പേജ്", withlove:"സ്നേഹപൂര്‍വ്വം,\nകുമാര്‍, വിജയലക്ഷ്മി, രവീന്ദ്രന്‍, ശ്യാമള",
+    name1:"സൂര്യപ്രകാശ്", name2:"സിസിര",
+    couple:"ക്യുപിള്‍ സ്‌റ്റോറി", venue:"വേദി വിശദാംശങ്ങള്‍", food:"ഭക്ഷണ പട്ടിക", photos:"ഫോട്ടോകള്‍"
   }
 };
 
@@ -37,14 +22,10 @@ function setLanguage(lang) {
   selectedLang = lang; localStorage.setItem("siteLang",lang);
   document.querySelectorAll("[data-key]").forEach(elem=>{
     const key=elem.getAttribute("data-key");
-    if(translations[lang][key])elem.innerText=translations[lang][key];
+    if(key==="withlove") elem.innerHTML=translations[lang][key].replace("\n","<br>");
+    else if(translations[lang][key]) elem.innerText=translations[lang][key];
   });
-  // Food menu translations (for food.html)
-  const menuNames = translations[lang].menu;
-  document.querySelectorAll(".food-item p").forEach((p,i)=>{
-    if(menuNames&&i<menuNames.length)p.textContent=menuNames[i];
-  });
-  document.querySelector(".menu-heading") && (document.querySelector(".menu-heading").textContent=translations[lang].menuLabel);
+  // Food menu: handled separately on food.html if needed
 }
 document.addEventListener("DOMContentLoaded",()=>{setLanguage(selectedLang);});
 
@@ -58,3 +39,16 @@ window.addEventListener("DOMContentLoaded", ()=>{
   muteBtn.onclick = ()=>{player.muted=!player.muted;updateMuteIcon();};
   updateMuteIcon();
 });
+
+// Optional: Countdown remains as before
+const countdown = document.getElementById("countdown");
+const targetDate = new Date("2025-08-24T18:00:00+05:30");
+function updateCountdown() {
+  if (!countdown) return;
+  const now = new Date();
+  const diff = targetDate - now;
+  if (diff <= 0) { countdown.innerText = "❤️ Today is the Big Day! ❤️"; return; }
+  const d = Math.floor(diff/8.64e7), h = Math.floor((diff%8.64e7)/3.6e6), m = Math.floor((diff%3.6e6)/6e4), s = Math.floor((diff%6e4)/1e3);
+  countdown.innerText = `${d} days ${h} hrs ${m} min ${s} sec`;
+}
+setInterval(updateCountdown, 1000); updateCountdown();
