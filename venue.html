@@ -8,19 +8,34 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+  <div class="top-bar">
+    <button class="back-btn" onclick="window.location.href='index.html'">&larr; <span id="back-text">Back to Home</span></button>
+    <div class="language-toggle">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('ta')">தமிழ்</button>
+      <button onclick="setLanguage('ml')">മലയാളം</button>
+    </div>
+  </div>
+  <h2 id="venue-title-heading">Venue Details</h2>
   <div class="hero">
     <div class="venue-box">
-      <img src="https://drive.google.com/uc?export=view&id=YOUR_HALL_PHOTO_ID" class="venue-photo" alt="Hall Photo"/>
+      <img src="asset/venue/IMG-20250727-WA0004.jpg" class="venue-photo" alt="Venue Photo"/>
       <div class="venue-title">Sri Vasavi Marriage Hall</div>
       <div class="venue-address">
         Thirumarugal, Tamil Nadu<br>
         24th August 2025, From 6 PM onwards
       </div>
-      <a href="https://goo.gl/maps/YOUR_MAP_LINK" target="_blank" class="venue-map-btn">Open in Google Maps</a>
+      <a href="https://goo.gl/maps/XXXXXXXXXXXXX" target="_blank" class="venue-map-btn">Open in Google Maps</a>
       <div style="margin-top:12px;">
         <a href="tel:+91XXXXXXXXXX" class="venue-contact-btn">Contact: +91-XXXXXXXXXX</a>
       </div>
     </div>
+  </div>
+  <div id="audio-control-wrap">
+    <audio id="bg-music" loop autoplay>
+      <source src="asset/bg-music.mp3" type="audio/mp3">
+    </audio>
+    <button id="mute-btn" aria-label="Mute/Unmute">&#128266;</button>
   </div>
 </body>
 </html>
