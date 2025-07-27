@@ -8,18 +8,32 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <h2>Photo Gallery</h2>
+  <div class="top-bar">
+    <button class="back-btn" onclick="window.location.href='index.html'">&larr; <span id="back-text">Back to Home</span></button>
+    <div class="language-toggle">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('ta')">தமிழ்</button>
+      <button onclick="setLanguage('ml')">മലയാളം</button>
+    </div>
+  </div>
+  <h2 id="photo-gallery-title">Photos</h2>
   <div class="gallery-box">
     <div class="placeholder">
       Event photos will appear here after the function 😊
     </div>
     <!--
     <div class="gallery-grid">
-      <img src="https://drive.google.com/uc?export=view&id=PHOTO1_ID" alt="Moment 1">
-      <img src="https://drive.google.com/uc?export=view&id=PHOTO2_ID" alt="Moment 2">
-      ... more photos ...
+      <img src="asset/venue/IMG-20250727-WA0006.jpg" alt="Moment 1">
+      <img src="asset/venue/IMG-20250727-WA0012.jpg" alt="Moment 2">
+      ...add more after event...
     </div>
     -->
+  </div>
+  <div id="audio-control-wrap">
+    <audio id="bg-music" loop autoplay>
+      <source src="asset/bg-music.mp3" type="audio/mp3">
+    </audio>
+    <button id="mute-btn" aria-label="Mute/Unmute">&#128266;</button>
   </div>
 </body>
 </html>
