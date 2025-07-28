@@ -21,3 +21,18 @@ body {font-family:'Segoe UI',sans-serif;margin:0;background:#fff0f5;color:#333;t
   .hero{padding:1.1rem 2vw;}
   .with-love{font-size:0.97rem;}
 }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  padding: 1em;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
