@@ -9,25 +9,20 @@
 </head>
 <body>
   <div class="top-bar">
-    <button class="back-btn" onclick="window.location.href='index.html'">&larr; <span id="back-text">Back to Home</span></button>
+    <button class="back-btn" onclick="window.location.href='index.html'">&larr; <span id="back-text" data-key="back">Back to Home</span></button>
     <div class="language-toggle">
       <button onclick="setLanguage('en')">English</button>
       <button onclick="setLanguage('ta')">தமிழ்</button>
       <button onclick="setLanguage('ml')">മലയാളം</button>
     </div>
   </div>
-  <h2 id="photo-gallery-title">Photos</h2>
+  <h2 id="photo-gallery-title" data-key="photos">Photos</h2>
   <div class="gallery-box">
-    <div class="placeholder">
-      Event photos will appear here after the function 😊
-    </div>
-    <!--
     <div class="gallery-grid">
       <img src="asset/venue/IMG-20250727-WA0006.jpg" alt="Moment 1">
       <img src="asset/venue/IMG-20250727-WA0012.jpg" alt="Moment 2">
-      ...add more after event...
+      <img src="asset/venue/IMG-20250727-WA0010.jpg" alt="Moment 3">
     </div>
-    -->
   </div>
   <div id="audio-control-wrap">
     <audio id="bg-music" loop autoplay>
