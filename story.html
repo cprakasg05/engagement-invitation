@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Story</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="top-bar">
+    <button class="back-btn" onclick="window.location.href='index.html'">&larr; <span data-key="back">Back to Home</span></button>
+    <div class="language-toggle">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('ta')">தமிழ்</button>
+      <button onclick="setLanguage('ml')">മലയാളം</button>
+    </div>
+  </div>
+  <h2 id="couple-story-title" data-key="couple-story-title">Couple Story</h2>
+  
+<div class="hero">
+  <div class="couple-card">
+    <img src="asset/venue/IMG-20250727-WA0010.jpg" class="couple-photo" alt="Couple Photo">
+    <div class="couple-names">Suriyaprakash &amp; Sisira</div>
+    <div class="couple-story">
+      Our story began with friendship and laughter, and blossomed into a beautiful journey of love. Join us as we celebrate our commitment and the promise of a lifetime together.
+    </div>
+  </div>
+</div>
+
+  <div id="audio-control-wrap">
+    <audio id="bg-music" loop autoplay>
+      <source src="asset/bg-music.mp3" type="audio/mp3">
+    </audio>
+    <button id="mute-btn" aria-label="Mute/Unmute">&#128266;</button>
+  </div>
+</body>
+</html>
