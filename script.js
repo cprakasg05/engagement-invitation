@@ -26,7 +26,7 @@ const translations = {
     "venue-contact4": "Sisira: 9159109955"
   },
   ta: {
-    name1: "சூரியப்ரகாஷ்",
+    name1: "சூரியபிரகாஷ்",
     name2: "சிசிரா",
     couple: "ஜோடி கதை",
     venue: "நிகழ்வு விவரங்கள்",
