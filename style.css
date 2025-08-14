@@ -84,7 +84,7 @@ body {
 }
 
 .beating-heart-img {
-  width: 2em !important;
+  width: 1.5em !important;
   height: auto;
   animation: heartBeat 1.1s infinite cubic-bezier(0.4, 0, 0.6, 1);
   transform-origin: 50% 60%;
