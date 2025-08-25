@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const countdownEl = document.getElementById('countdown-timer') || document.getElementById('countdown');
   if (countdownEl) {
     function updateCountdown() {
-      const eventDate = new Date('2025-08-24T18:00:00+05:30');
+      const eventDate = new Date('2026-02-08T08:30:00+05:30');
       const now = new Date();
       const diff = eventDate - now;
       if (diff > 0) {
