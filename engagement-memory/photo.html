@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="top-bar">
+    <div style="display:flex; gap:10px;">
+      <button class="back-btn" onclick="window.location.href='index.html'" style="margin-left: 1rem;">← <span data-key="back">Back</span></button>
+      <button class="back-btn" onclick="window.location.href='../index.html'" style="margin-left: 0.5rem; background:#218c5b;">🏠 <span data-key="home">Home</span></button>
+    </div>
+    <div class="language-toggle">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('ta')">தமிழ்</button>
+      <button onclick="setLanguage('ml')">മലയാളം</button>
+    </div>
+  </div>
+  <h2 id="photo-gallery-title" data-key="photos">Photos</h2>
+  <div class="gallery-box">
+    <div class="gallery-grid">
+      <!-- All event photos will be added here after the function -->
+    </div>
+  </div>
+  <div class="photo-placeholder" style="text-align:center;margin:4em 0;">
+    <h2>Photo Gallery Coming Soon!</h2>
+    <p>Please visit this page after the function is finished.<br>
+    We will try to add all the event photos here once they are ready.<br>
+    Thank you for your patience and excitement!</p>
+  </div>
+  <div id="audio-control-wrap">
+    <audio id="bg-music" loop autoplay>
+      <source src="asset/bg-music.mp3" type="audio/mp3">
+    </audio>
+    <button id="mute-btn" aria-label="Mute/Unmute">&#128266;</button>
+  </div>
+</body>
+</html>

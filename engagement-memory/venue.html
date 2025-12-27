@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Venue Details</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="top-bar">
+    <div style="display:flex; gap:10px;">
+      <button class="back-btn" onclick="window.location.href='index.html'" style="margin-left: 1rem;">← <span data-key="back">Back</span></button>
+      <button class="back-btn" onclick="window.location.href='../index.html'" style="margin-left: 0.5rem; background:#218c5b;">🏠 <span data-key="home">Home</span></button>
+    </div>
+    <div class="language-toggle">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('ta')">தமிழ்</button>
+      <button onclick="setLanguage('ml')">മലയാളം</button>
+    </div>
+  </div>
+  <h2 id="venue-title-heading" data-key="venue">Venue Details</h2>
+  <div class="hero">
+    <div class="venue-box">
+      <img src="asset/venue/IMG-20250816-WA0002.jpg" class="venue-photo" alt="Venue Photo"/>
+      <div class="venue-title" data-key="venue-hall" style="font-size:2.1em;font-weight:bold;margin:0.5em 0 0.3em 0;">Sri Vasavi Marriage Hall</div>
+      <div class="venue-address" data-key="venue-address">
+        Thirumarugal, Tamil Nadu<br>
+        <span data-key="venue-date">24th August 2025, From 6 PM onwards</span>
+      </div>
+      <a href="https://maps.app.goo.gl/vWCyjf7HPe1DcjtJ8" target="_blank" class="section-btn venue-map-btn" style="margin:1.2em 0 0 0;font-size:1.18em;padding:16px 32px;display:inline-block;">📍 Open in Google Maps</a>
+      <div class="venue-contact-card" style="margin-top:18px;padding:18px 22px;background:#f6fff7;border-radius:18px;box-shadow:0 2px 12px rgba(33,140,91,0.08);max-width:340px;display:inline-block;">
+        <div style="font-size:1.15em;font-weight:600;color:#218c5b;margin-bottom:8px;">📞 Contact</div>
+        <a href="tel:+919159109955" class="venue-contact-btn" style="color:#145A32;font-weight:500;text-decoration:none;display:block;margin-bottom:6px;">Suriyaprakash: 9159109955</a>
+        <a href="tel:+917339646162" class="venue-contact-btn" style="color:#145A32;font-weight:500;text-decoration:none;display:block;margin-bottom:6px;">Vijay (CP): 7339646162</a>
+        <a href="tel:+919488003374" class="venue-contact-btn" style="color:#145A32;font-weight:500;text-decoration:none;display:block;">Kumar: 9488003374</a>
+      </div>
+    </div>
+  </div>
+  <div id="audio-control-wrap">
+    <audio id="bg-music" loop autoplay>
+      <source src="asset/bg-music.mp3" type="audio/mp3">
+    </audio>
+    <button id="mute-btn" aria-label="Mute/Unmute">&#128266;</button>
+  </div>
+</body>
+
+</html>

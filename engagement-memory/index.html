@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Engagement Invitation: Suriyaprakash & Sisira</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="top-bar">
+    <div style="display:flex; gap:10px;">
+      <button class="back-btn" onclick="window.location.href='../index.html'" style="margin-left: 1rem;">← <span data-key="back">Back</span></button>
+      <button class="back-btn" onclick="window.location.href='../index.html'" style="margin-left: 0.5rem; background:#218c5b;">🏠 <span data-key="home">Home</span></button>
+    </div>
+    <div class="language-toggle">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('ta')">தமிழ்</button>
+      <button onclick="setLanguage('ml')">മലയാളം</button>
+    </div>
+  </div>
+  <div class="hero">
+    <div class="couple-stack">
+      <span class="couple-top" data-key="name1">Suriyaprakash</span>
+      <div class="heart-row">
+        <span class="heart">
+          <img src="asset/green-heart-arrow.png" alt="Green Heart with Arrow" class="beating-heart-img" style="width:2em;height:auto;vertical-align:middle;" />
+        </span>
+      </div>
+      <span class="couple-bottom" data-key="name2">Sisira</span>
+    </div>
+    <p id="countdown"></p>
+  </div>
+  <div class="sections">
+    <a href="story.html" class="section-btn" data-key="couple">Couple Story</a>
+    <a href="venue.html" class="section-btn" data-key="venue">Venue Details</a>
+    <a href="food.html" class="section-btn" data-key="food">Food Menu</a>
+    <a href="photo.html" class="section-btn" data-key="photos">Photos</a>
+  </div>
+  <div id="audio-control-wrap">
+    <audio id="bgMusic" autoplay loop>
+      <source src="asset/AUD-20250816-WA0047.mp3" type="audio/mp3">
+    </audio>
+    <button id="muteButton" aria-label="Mute/Unmute">&#128266;</button>
+  </div>
+  <div class="with-love" data-key="withlove">
+    With love,<br>
+    Kumar & Vijayalakshmi, Raveendran & Syamala
+  </div>
+</body>
+</html>
