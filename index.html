@@ -17,30 +17,271 @@
       <button onclick="setLanguage('ml')">മലയാളം</button>
     </div>
   </div>
-  <div class="hero">
-    <div class="couple-stack">
-      <span class="couple-top" data-key="name1">Suriyaprakash</span>
-      <div class="heart-row">
-        <span class="heart">
-          <img src="asset/green-heart-arrow.png" alt="Green Heart with Arrow" class="beating-heart-img" style="width:2em;height:auto;vertical-align:middle;" />
-        </span>
+
+  <!-- HOME SECTION: Couple Header & Navigation -->
+  <div id="home-section" class="section active">
+    <div class="hero">
+      <div class="couple-stack">
+        <span class="couple-top" data-key="name1">Suriaprakash</span>
+        <div class="heart-row">
+          <span class="heart">
+            <img src="asset/green-heart-arrow.png" alt="Green Heart with Arrow" class="beating-heart-img" style="width:2em;height:auto;vertical-align:middle;" />
+          </span>
+        </div>
+        <span class="couple-bottom" data-key="name2">Sisira</span>
       </div>
-      <span class="couple-bottom" data-key="name2">Sisira</span>
     </div>
-    <p id="countdown"></p>
+
+    <!-- BIG EVENT BUTTONS -->
+    <div class="event-selector">
+      <button class="big-event-btn active" onclick="window.location.href='marriage-venue.html'" data-key="event-marriage">
+        <span style="font-size:1.8em;">💍</span><br><span data-key="event-marriage-text">Marriage</span><br><span style="font-size:0.9em;">Feb 1</span>
+      </button>
+      <button class="big-event-btn" onclick="window.location.href='reception-venue.html'" data-key="event-reception">
+        <span style="font-size:1.8em;">🎉</span><br><span data-key="event-reception-text">Reception</span><br><span style="font-size:0.9em;">Feb 8</span>
+      </button>
+    </div>
+
+    <!-- COUNTDOWN TIMER -->
+    <div class="countdown-section">
+      <p id="countdown"></p>
+    </div>
+
+    <!-- COUPLE STORY BUTTON -->
+    <button class="story-toggle-btn" onclick="toggleStory()" data-key="view-story">
+      📖 View Our Story
+    </button>
+
+    <!-- Couple Story Section (Hidden by default) -->
+    <div id="couple-story-container" class="story-section hidden">
+      <button class="close-story-btn" onclick="toggleStory()">✕ Close</button>
+      <h2 id="couple-story-title" data-key="couple-story-title">Couple Story</h2>
+      <div class="story-layout">
+        <!-- English STORY -->
+        <div class="couple-story" style="display:block;" data-key="couple-story-en">
+          <p><strong>💫 "I am the Universe… and I have a little secret." 💫</strong></p>
+          <p>
+            In August 2021, I planted a seed. Its name was <b>Suriyaprakash</b>, a bright young man who walked into an office in Chennai with a bag full of dreams, no clue about what I was secretly planning. One year later, I placed <b>Sisira</b> in the very same office. She had her own dreams, her own coffee breaks, her own world. And yet… they never even noticed each other.<br><br>
+            Oh, but I'm patient. I'm the Universe.
+          </p>
+          <p>
+            Fast-forward to mid-2023. One ordinary day, Suriya's eyes finally found Sisira. And just like that, something in his heart quietly switched from "normal" to "oh no… I'm in trouble." The only problem? She didn't even know he <i>existed</i>. So I sent in my secret agent: a mutual friend. Through this friend, Suriya started collecting little details about her — her name, her laugh, her tiny quirks. Every new piece of information was like adding another petal to a flower he didn't even know he was growing.
+          </p>
+          <img src="asset/couple/left.jpg" class="couple-photo" alt="Suriyaprakash"/>
+          <p>
+            Then came October 2024, just before Deepavali. Trouble from home arrived: his parents had found a girl for an arranged marriage. Cornered, Suriya finally blurted out the truth — "There's someone I like… her name is Sisira. Give me time."
+          </p>
+          <p>
+            And on <i>her</i> side? I nudged a small coincidence into place. One day, at work, she had a process issue and needed help from someone in Suriya's shift. She walked over… and there he was. That night, after months of ignoring his Instagram requests, she finally pressed "Accept." At first, she warned him: "I'm not interested in love." He simply said, "That's fine. Let's just talk as friends. But I like you… a lot."
+          </p>
+          <img src="asset/couple/center.jpg" class="couple-photo" alt="Couple Together"/>
+          <p>
+            Day by day, message by message, they began to know each other. A few meet-ups later, she realized she'd already lost her heart. Then came the "meet my mom" moment. She agreed, perhaps out of curiosity… but when she met his mother, something clicked. His mom adored her instantly. Within hours, she was on video call with his entire extended family — a dream come true for a girl who always wished to marry into a big, loving clan.
+          </p>
+          <img src="asset/couple/right.jpg" class="couple-photo" alt="Sisira"/>
+          <p>
+            From there, the path was simple. Her sister discovered the romance, championed it to the family, and soon both sides were on the phone making plans. They exchanged <i>thambulam</i> in Palakkad, ate together, and decided: They will handle the engagement and reception; her family will take care of the wedding. And here we are…
+          </p>
+          <img src="asset/couple/4pic.jpg" class="couple-photo" alt="Special Moment"/>
+          <p>
+            Two hearts, One promise,<br>
+            And a lifelong journey that officially begins now. <b>💍✨</b>
+          </p>
+        </div>
+
+        <!-- Tamil STORY -->
+        <div class="couple-story" style="display:none;" data-key="couple-story-ta">
+          <p><b>🏠💔 <strong>முதல் முறை:</strong></b><br>
+          அகம் உடைந்து மனம் மெலிந்து என் இல்லம் விட்டு வெளியேறி தஞ்சம் புகுந்த நான் சூரியபிரகாஷ் என்னை ஏற்று கொண்ட இடம் மதராசி...
+          </p>
+          <p><b>🌅 <strong>வரவேற்புரை:</strong></b><br>
+          சிவப்பு கம்பளம் விரித்த ஆகாயம் மெதுமெதுவாய் நீல வண்ணத்தில் தோன்றி உன் நேரம் இனிதே தொடங்குகிறது உன் வாழ்க்கையை பார் என்றது</p>
+          <p><b>🏭 <strong>வாழ்க்கையின் தொடக்கம்:</strong></b><br>
+          என் வாழ்க்கை வாழ்வதற்கு நான் எடுத்த முதல் முனைப்பு (Foxconn) தொழிற்சாலை...</p>
+          உங்களுக்கெல்லாம் போர் அடிக்குதா...<br>
+          இனி உங்க எல்லாருக்கும் புரியுற மாதிரியே சொல்றேன்...</p>
+          <p>காலேஜ் முடிச்சு ஜாலியா ஊர் சுத்திட்டு இருந்த என்னை எங்க அப்பா நீ என்ன தான் பண்ண போற லைஃப்ல அடுத்து என்ன டிசிசன் எடுத்திருக்கனு கேட்டாங்க அப்போ நான் வந்த இடம் தான் இந்த (foxconn) உங்களுக்கு புரியுற மாதிரி சொல்லனும்னா ஐபோன் கம்பெனி....</p>
+          கம்பெனி வந்து கொஞ்ச நாளையே வீட்டுக்கு ஓடிட்லாம் நினைச்சிட்டிருந்தேன் ஆனா காலப்போக்கில நான் வாங்குற சம்பளம் என்ன சந்தோஷமா வாச்சிக்கிட்டு அப்போதான் என் லைஃப் ஸ்டார்ட் பண்ணேன்</p>
+          அப்போ எனக்கு தெரியல்ல நான் இங்க ஒரு பொன்ன லவ் பண்ணி கல்யாணம் பண்ணுவேன்னு ஆனா இப்போ அந்த பொன்ன கல்யாணம் பண்ண போறேன் நீங்கெல்லாம் வாங்கன்னு கூப்பிட வந்திருக்கேன்<br>
+          சரி அந்த பொன்ன எப்டி பாத்தேன் எங்க பாத்தேன் சொல்றேன்</p>
+          <img src="asset/couple/left.jpg" class="couple-photo" alt="Suriyaprakash"/>
+          <p><b>👀✨ <strong>கண்கள் கண்ட முகம்:</strong></b><br>
+          விழிகளில் மின்னல் கீற்றை சுமந்து என்னெதிரே பாவையின் இலக்கணமாக வந்தாள்...
+          </p>
+          என்னடா திரும்ப ஆரம்பிச்சிட்டேன் பாக்ரிங்லா<br>
+          என் ஆள அறிமுகம் பண்றேன்ல அப்போ கவிதை சொல்லணும்ல அதான்</p>
+          சரி இப்போ பொண்ணு பாக்க போலாமா..?</p>
+          <p>இரண்டு வருஷம் காலம் போன போக்கில் போனேன்...  ஒருநாள் நான் எங்க டீம்காக சப்போர்ட் பண்ண போயிருந்தேன் அப்போ தான் முதல் முறை அவல நான் வேலை பாக்குற இடத்துல பாத்தேன் என் கண்ணுக்கு ரொம்ப அழகா தெரிஞ்சா..</p>
+          அளவான உயரம் அழகான முகம் அதற்கு ஈடான சிரிப்பு இப்படி அங்க இருந்து என்ன திரும்பி போகாத மாதிரி பண்ணிட்டா... </p>
+          அதுக்கு அப்புறம் எப்போ எங்க டீம் சப்போர்ட் கூப்பிட்டாலும் முதல் ஆளு நான்தான் அப்புறம் அவள பாத்த படியே ஒரு வருஷம் போச்சு... இந்த ஒரு வருஷத்துல அவ வச்சிருந்த இன்ஸ்டாகிராம்-கு என்ன முடியாத அளவுக்கு ரிக்வெஸ்ட் கொடுப்பேன்... </p>
+          இந்த ஒரு வருஷத்துல அவ வச்சிருந்த இன்ஸ்டாகிராம்-கு என்ன முடியாத அளவுக்கு ரிக்வெஸ்ட் கொடுப்பேன் ஆனா அவ கண்டுக்க கூட மாட்டா விடலையே நான் கொடுத்த ரிக்வெஸ்ட்ட நானே டெலிட் பண்ணி திரும்ப நானே ரிக்வெஸ்ட் கொடுப்பேன்...அவள் என்னை பாக்க கூட மாட்டா...நான் அவளை பாக்க கூட மாட்டா...இப்படி ஒரு சைக்கிள்ல இருந்தேன்</p>
+          <img src="asset/couple/center.jpg" class="couple-photo" alt="Couple Together"/>
+          <p><b>🔍 <strong>தேடிய உறவு:</strong></b><br>
+          திடீர்னு ஒருநாள் நான் இருக்க இடத்துக்கு வந்தா என் கண்ணுக்கு நேரா வந்து ரெண்டு அடி தூரத்தில நின்னு ஏதோ ப்ராப்ளம்-னு பண்ணிடிருந்தா நான் அவளையே பாத்திட்டு இருந்தேன்<br>
+          ஆனா அன்னைக்கு நைட் ஒண்ணு நடந்துச்சி பாருங்க.. வீட்டுக்கு போயிட்டு என் இன்ஸ்டாகிராம் ரிக்வெஸ்ட்ட அக்செப்ட் பண்ணிட்டா</p>
+          அந்த நொடி என் மண்டக்குள்ள மேகத்து மூலையில மேகமில்ல மின்னலில்லை பூமி நினைஞ்ஜிறுச்சி அப்டின்னு ஏ ஆர் ரகுமான் பாட்ட போட்டு தாக்கிட்டாருங்க..</p>
+          <p>அப்புறம் எல்லா பசங்கள மாதிரி நானும் கொஞ்சம் கூட வெட்கமே இல்லாம ஃபர்ஸ்ட் மெசேஜ் பண்ணிட்டேன்.<br>
+          அப்புறம் மெசேஜ்,போன் கால் ஆச்சு,போன் கால் ஒருநாள் நேர்ல பாக்கணும் ஆசை வந்து அவள தேடி போச்சுங்க ஆனா அவ பாக்க வர மாட்டேன் சொல்லிடாங்க<br>
+          லவ் இதெல்லாம் எனக்கு வேணாம் சொல்லிடுங்க அந்த பொண்ணு ஆனா அவளுக்கு என்ன பிடிச்சிருக்குனு மட்டும் நல்லாவே தெரிஞ்சுது </p>
+          அப்போதான் ஒரு ஐடியா பண்ணேன் நீ இருக்க இடம் எனக்கு தெரியாதுல அத மீறி நான் உன்னை கண்டுபிடிச்சு நீ இருக்க இடம் தேடி வந்தா என்ன லவ் பண்றதை அக்செப்ட் பண்ணுவியானு கேட்டு சம்மதிக்க வச்சிட்டேங்க</p>
+          அப்புறம் அவள தேடி போனேன் அவ வீட்ட அவளுக்கு நேராவே தாண்டி போயிருக்கேங்க ஆனா கல் நெஞ்சுக்காரி என்ன கூப்பிடவே இல்ல</p>
+          அப்புறம் அவளுக்கு போன் பண்ணி எனக்கு ஒரு அடையாளம் சொல்லுன்னு கேட்டேன் அவ சொல்ல மாட்டானு நினைச்சேன் ஆனா ஒண்ணு இல்ல மூணு அடையாளம் சொன்னா ஒவ்வொரு போன் பண்ணி இப்போ தெரியுதா அவளுக்கும் என்ன பிடிச்சிருக்குனு..😇</p>
+          அப்புறம் தேடி பார்த்து கண்டுபிடிச்சிடேங்க எனக்கு அவ்ளோ சந்தோஷம்..</p>
+           <img src="asset/couple/right.jpg" class="couple-photo" alt="Sisira"/>
+           அப்புறம் லவ் வேணாம் சொன்னவ்வ என்ன வேணும் சொன்னா நம்ம நிறைய பேசணும் பழகனும் சொன்னா</p>
+          அப்போ தீபாவளி வந்துச்சு ஊருக்கு போயிருந்தோம் அப்போ எங்க வீட்ல எனக்கு பொண்ணு பாத்துட்டு இருந்தாங்க அப்போ அம்மா கிட்ட இவள பத்தி சொன்னேன் எனக்கு ஒரு மாசம் டைம் கொடுங்கனு கேட்டேன் எங்க அம்மா சரின்னு சொல்லிட்டு ஆனா ஒரு மாசம் தான் டைம் அப்புறம் நாங்க பாக்குற பொன்ன தான் கல்யாணம் பண்ணிக்கணும் சொல்லிட்டாங்க</p>
+          சென்னைக்கு வந்தேன் திரும்ப இங்க தான் ஒரு ட்விஸ்ட் என்கூட அம்மாவையும் அழைச்சிட்டு வந்தேன்</p>
+          அவளுக்கு போன் பண்ணி அம்மா உன்னை பாக்கணும் சொல்லுசின்னு சொல்லிட்டேன்</p>
+          அவ வந்தா அம்மாவை பாத்து பேசுனா ரெண்டு பேரும் என்ன சொல்ல போறாங்கனு தெரில்லையேனு யோசிச்சா ரெண்டு பேரும் என்ன கழட்டி விட்டுட்டு போன்ல என் மொத்த சொந்த காரங்க கிடையும் கதை அடிச்சிட்டு இருக்காங்க அப்போவே புரிஞ்சுகிட்டேன் அவங்க ரெண்டு பேருக்கும் சந்தோஷம்னு</p>
+          அப்புறம் எங்க ரெண்டு பேர் வீட்லயும் பேசி பொண்ணு பாக்க போயி இப்போ நிச்சயத்துல வந்து நிக்குதுங்க</p>
+          அப்புறம......</p>
+          எவ்ளோ நேரம் தான் கதையா கேட்பீங்க இதுக்கு அப்புறம் என்ன நடக்குதுனு நேர்ல வந்து பாருங்க எல்லாரும் சந்தோஷமா...</p>
+          <img src="asset/couple/4pic.jpg" class="couple-photo" alt="Special Moment"/>
+          <p>இரு நாடு<br>ஒரு கதை<br>நிறைய காதல்...❣️</p>
+        </div>
+
+        <!-- Malayalam STORY -->
+        <div class="couple-story" style="display:none;" data-key="couple-story-ml">
+          <p><b>🌅 <strong>പുതിയ തുടക്കം:</strong></b><br> </p>
+          ജനിച്ചു വളർന്ന സ്വന്തം നാടുവിട്ടു, ഭാഷയിൽ നിന്ന് ആചാരങ്ങൾ വരയ്ക്കും വ്യത്യസ്തമായുള്ള ആ നഗരത്തിലേക്ക് ഒട്ടും താല്പര്യമില്ലാതെ യാത്രചെയ്തുവന്ന എന്നോട് 'ഉങ്ക ഊർ വന്ദിരിച്' എന്ന് ഇറങ്ങാൻ പറഞ്ഞ ഇടം ചെന്നൈ (പഴയ മദ്രാസ്).ആദ്യമായാണ് പാലക്കാട് കോട്ടയെക്കാൾ വലുപ്പമുള്ള ഒരു കെട്ടിടം ഞാൻ കാണുന്നത്. ഫോക്സ്കോൻ, അവിടെ ആയിരുന്നു ഞാൻ ജോലി ചെയ്തിരുന്നത്. പഠിച്ച പണിക്ക് പോവാൻ പറ്റിയില്ലെന്ന തോന്നാലും തിരിച്ചു  വീട്ടിലേക്ക് തിരിക്കാൻ ഉള്ള തീരുമാനവും ഒരു കാര്യത്തിൽ എന്നെ പിൻതിരിപ്പിച്ചു.</p>
+          <img src="asset/couple/left.jpg" class="couple-photo" alt="Suriyaprakash"/>
+          പതുക്കെ അയാൾ പറഞ്ഞപോലെ മദ്രാസ് എന്ന! അല്ല  ചെന്നൈ എന്ന നഗരം എന്റെ ഊർ ആയിമാറി. കൂട്ടുകാരും കമ്പനിയിൽ ഉള്ള കോളീഗ്സും ആയി നന്നായി അടുത്തു. പിന്നീട് ലാലേട്ടൻ പറയുന്നപോലെ എന്തോ ഇഷ്ടമാണെല്ലാവർക്കും എന്നെ. ഇൻസ്റ്റാഗ്രാം റീൽസിൽ ഒക്കെയും കണ്ടിട്ടുണ്ട്, ജീവിതം എന്തെന്നറിയാത്തവർക്ക് അതു പഠിപ്പിച്ചുകൊടുന്ന ഇടമാണ് ചെന്നൈ. ഞാനും പഠിച്ചു... എന്തൊക്കെയോ എത്തിപ്പിടിക്കാനുള്ള ധൃതിയിൽ രണ്ടു വർഷം പോയതറിഞ്ഞില്ല. ഒരു യന്ത്രമെന്നപോലെ ഞാനുംതിരിഞ്ഞുകൊണ്ടിരുന്നു. ഞാൻ എന്നെ കുറിച്ച് മാത്രം പറഞ്ഞു ബോർ അടിപ്പിക്കുന്നില്ല, എന്നുവെച്ച് വലിയൊരു ലവ് സ്റ്റോറി ഒന്നുമല്ലട്ടോ...</p>
+          <img src="asset/couple/4pic.jpg" class="couple-photo" alt="Special Moment"/>
+          ഇന്നും വൈകി. മീറ്റിംഗ് കഴിയുന്ന മുൻപേ  ഒന്നു തലകാണിക്കാനായി ഞാൻ ഓടിച്ചെന്നു. ലൈൻ പ്രോസസിന്റെ ഭാഗമായി ഒരാളെ തിരക്കിച്ചെന്ന ഞാൻ കണ്ടത് വേറെ ഒരു മുഖമായിരുന്നു, സൂര്യപ്രകാശ്. ഇൻസ്റ്റാഗ്രാമിൽ ഒരു  വർഷത്തിൽ  പലതവണകളായി വന്ന റിക്വസ്റ്റ് ന്റെ ഉടമ. നേരിൽ കാണാത്തതിനാലും  പരിചയമില്ലാത്തതിനാലും ഞാൻ ഒരുതവണ പോലും ആ റിക്വസ്റ്റ് ഓപ്പൺ ചെയ്തിരുന്നില്ല. ജോലി കഴിഞ്ഞ് റൂമിലേക്ക്‌ എത്തിയ ഉടനെ പതിവുപോലെ ദേ വന്നു! ഇൻസ്റ്റാഗ്രാം റിക്വസ്റ്റ്...</p>
+          <img src="asset/couple/right.jpg" class="couple-photo" alt="Sisira"/>
+          റൂംമേറ്റ്സ് ൽ ഒരാൾ ഓൾറെഡി ഫോളോയിൽ കണ്ട ഞാൻ അവളോട് ചെന്ന് തിരക്കി. "നിന്നെ അവനു ഒരു വർഷമായി അറിയാം, എന്നോട് നിന്നെപ്പറ്റി ചോദിക്കാറുണ്ട്. തന്നെപ്പറ്റി താൻ തന്നെ പറയണം എന്ന് അവൻ പറഞ്ഞതിനാലാണ് ഞാൻ നിന്നോട് ഒന്നും മിണ്ടാതിരുന്നത്". എല്ലാരേയും പോലെ മിനിറ്റുകൾക്കുള്ളിൽ ഹലോ എന്ന മെസ്സേജ്. പാതി മെസ്സേജ് ൽ നിന്നും കാര്യം മനസിലായി. "എനിക്ക് കല്യാണത്തിലും പ്രണയത്തിലും ഇപ്പോൾ താല്പര്യമില്ല". ഒട്ടും പ്രേരിപ്പിക്കാത്ത അവന്റെ ഇടപഴകൾ മെസ്സേജ് ൽ നിന്നും കോളിലേക്ക് മാറി.  ദീപാവലി അവധിക്കു വീട്ടിൽ ചെന്ന അവൻ അമ്മയെയും കൂട്ടി തിരിച്ചുവന്നു. "അമ്മയ്ക്കു നിന്നെ ഒന്ന് കാണണമെന്ന് പറഞ്ഞു". യെസ് എന്ന് പറയാൻ ഭയപ്പെട്ട മനസ്സ്. അമ്മയെ കണ്ടു സംസാരിച്ചു. പോയപോക്കിൽ വീട്ടിൽ ഉള്ള എല്ലാവരോടും ഫോണിൽ മിണ്ടി. അവനു വേണ്ടപ്പെട്ടവർ എനിക്കും വേണ്ടപ്പെട്ടവരായി. വൈകാതെത്തന്നെ ഞാൻ എന്റെ വീട്ടിൽ കാര്യം അവതരിപ്പിച്ചു. വലിയ എതിർപ്പുകൾ ഒന്നും ഇല്ലാതെ അവരും സമ്മതം മൂളി. തമിഴ്‌നാട്ടിൽ നിന്ന് കേരളത്തിലേക്ക്, മൈലുകളും മണിക്കൂറുകളും മറികടന്ന്, ഒരു  ബന്ധം...</p>
+          <img src="asset/couple/center.jpg" class="couple-photo" alt="Couple Together"/>
+          ഇന്ന് ഞങ്ങളുടെ കല്യാണം ഉറപ്പിക്കാൻ ചടങ്ങാണ്. കഥ നിർത്തി ഇനി ഉള്ളത് നേരിൽ കാണാം...</p>
+          <p>Two states,<br>One drama,<br>Infinite love & laugh...❣️</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="sections">
-    <a href="story.html" class="section-btn" data-key="couple">Couple Story</a>
-    <a href="venue.html" class="section-btn" data-key="venue">Venue Details</a>
-    <a href="food.html" class="section-btn" data-key="food">Food Menu</a>
-    <a href="photo.html" class="section-btn" data-key="photos">Photos</a>
+
+  <!-- EVENT DETAILS SECTION (Tabs for Venue, Food, Photo) -->
+  <div id="event-tabs-section" class="event-tabs-section hidden">
+    <!-- Back Button -->
+    <div class="event-back-button-wrapper">
+      <button class="back-btn" onclick="goBackHome()" data-key="back">← Back to Home</button>
+    </div>
+
+    <!-- Tab Navigation -->
+    <div class="event-section-header">
+      <button class="event-content-tab active" onclick="switchEventTab('venue')" data-key="tab-venue">🏛️ Venue</button>
+      <button class="event-content-tab" onclick="switchEventTab('food')" data-key="tab-food">🍽️ Food</button>
+      <button class="event-content-tab" onclick="switchEventTab('photo')" data-key="tab-photo">📸 Photos</button>
+    </div>
+
+    <!-- MARRIAGE EVENT CONTENT -->
+    <div id="marriage-content" class="event-content-wrapper">
+      <!-- Marriage Venue -->
+      <div class="event-content active" id="marriage-venue-content">
+        <h2 data-key="marriage-venue-title">Venue Details</h2>
+        <div class="venue-box">
+          <img src="asset/venue/IMG-20250816-WA0002.jpg" class="venue-photo" alt="Venue Photo"/>
+          <div class="venue-title" data-key="marriage-venue-hall" style="font-size:2.1em;font-weight:bold;margin:0.5em 0 0.3em 0;">Sri Vasavi Marriage Hall, Thirumarugal</div>
+          <div class="venue-address" data-key="marriage-venue-address">
+            Thirumarugal, Tamil Nadu<br>
+            <span data-key="marriage-venue-date">1st February 2026, From 6 PM onwards</span>
+          </div>
+          <a href="https://maps.app.goo.gl/vWCyjf7HPe1DcjtJ8" target="_blank" class="section-btn venue-map-btn" style="margin:1.2em 0 0 0;font-size:1.18em;padding:16px 32px;display:inline-block;">📍 <span data-key="venue-map">Open in Google Maps</span></a>
+          <div class="venue-contact-card" style="margin-top:18px;padding:18px 22px;background:#f6fff7;border-radius:18px;box-shadow:0 2px 12px rgba(33,140,91,0.08);max-width:340px;display:inline-block;">
+            <div style="font-size:1.15em;font-weight:600;color:#218c5b;margin-bottom:8px;">📞 Contact</div>
+            <a href="tel:+919159109955" class="venue-contact-btn" style="color:#145A32;font-weight:500;text-decoration:none;display:block;margin-bottom:6px;" data-key="marriage-contact-1">Suriyaprakash: 9159109955</a>
+            <a href="tel:+917339646162" class="venue-contact-btn" style="color:#145A32;font-weight:500;text-decoration:none;display:block;margin-bottom:6px;" data-key="marriage-contact-2">Vijay (CP): 7339646162</a>
+            <a href="tel:+919488003374" class="venue-contact-btn" style="color:#145A32;font-weight:500;text-decoration:none;display:block;" data-key="marriage-contact-3">Kumar: 9488003374</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marriage Food -->
+      <div class="event-content hidden" id="marriage-food-content">
+        <h2 id="marriage-food-title" data-key="marriage-food-title">🍽️ Menu Highlights</h2>
+        <div class="food-gallery">
+          <div class="food-item"><img src="asset/food/1ashoka-halwa.jpg" alt=""><p data-key="food1">Ashoka Halwa</p></div>
+          <div class="food-item"><img src="asset/food/2Kaara-paniyaram.jpg" alt=""><p data-key="food2">Kara Paniyaram</p></div>
+          <div class="food-item"><img src="asset/food/3Beetroot-idyappam.jpeg" alt=""><p data-key="food3">Beetroot Idiyappam</p></div>
+          <div class="food-item"><img src="asset/food/4Keerai-adai.jpg" alt=""><p data-key="food4">Keera Adai</p></div>
+          <div class="food-item"><img src="asset/food/5Chappathi.jpeg" alt=""><p data-key="food5">Chapathi</p></div>
+          <div class="food-item"><img src="asset/food/6curd-rice.jpg" alt=""><p data-key="food6">Curd Rice</p></div>
+          <div class="food-item"><img src="asset/food/7Idly.jpeg" alt=""><p data-key="food7">Idly</p></div>
+          <div class="food-item"><img src="asset/food/8Masalla-paal.jpeg" alt=""><p data-key="food8">Masala Milk</p></div>
+        </div>
+      </div>
+
+      <!-- Marriage Photos -->
+      <div class="event-content hidden" id="marriage-photo-content">
+        <h2 id="marriage-photo-title" data-key="marriage-photos">Photos</h2>
+        <div class="photo-placeholder" style="text-align:center;margin:4em 0;">
+          <h3>Photo Gallery Coming Soon!</h3>
+          <p>Please visit this page after the marriage function is finished.<br>
+          We will try to add all the event photos here once they are ready.<br>
+          Thank you for your patience and excitement!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECEPTION EVENT CONTENT -->
+    <div id="reception-content" class="event-content-wrapper hidden">
+      <!-- Reception Venue -->
+      <div class="event-content active" id="reception-venue-content">
+        <h2 data-key="reception-venue-title">Venue Details</h2>
+        <div class="venue-box">
+          <img src="asset/venue/IMG-20250816-WA0002.jpg" class="venue-photo" alt="Venue Photo"/>
+          <div class="venue-title" data-key="reception-venue-hall" style="font-size:2.1em;font-weight:bold;margin:0.5em 0 0.3em 0;">Varsha Marriage Hall, Thirumarugal</div>
+          <div class="venue-address" data-key="reception-venue-address">
+            Thirumarugal, Tamil Nadu<br>
+            <span data-key="reception-venue-date">8th February 2026, From 11:00 AM onwards</span>
+          </div>
+          <a href="https://maps.app.goo.gl/vWCyjf7HPe1DcjtJ8" target="_blank" class="section-btn venue-map-btn" style="margin:1.2em 0 0 0;font-size:1.18em;padding:16px 32px;display:inline-block;">📍 <span data-key="venue-map">Open in Google Maps</span></a>
+          <div class="venue-contact-card" style="margin-top:18px;padding:18px 22px;background:#f6fff7;border-radius:18px;box-shadow:0 2px 12px rgba(33,140,91,0.08);max-width:340px;display:inline-block;">
+            <div style="font-size:1.15em;font-weight:600;color:#218c5b;margin-bottom:8px;">📞 Contact</div>
+            <a href="tel:+919159109955" class="venue-contact-btn" style="color:#145A32;font-weight:500;text-decoration:none;display:block;margin-bottom:6px;" data-key="reception-contact-1">N. Kumar: 9159109955</a>
+            <a href="tel:+919488003374" class="venue-contact-btn" style="color:#145A32;font-weight:500;text-decoration:none;display:block;margin-bottom:6px;" data-key="reception-contact-2">K. Chandraprakash: 9488003374</a>
+            <a href="tel:+919159109955" class="venue-contact-btn" style="color:#145A32;font-weight:500;text-decoration:none;display:block;" data-key="reception-contact-3">Vijayalakshmi: 9159109955</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reception Food -->
+      <div class="event-content hidden" id="reception-food-content">
+        <h2 id="reception-food-title" data-key="reception-food-title">🍽️ Menu Highlights</h2>
+        <div class="food-gallery">
+          <div class="food-item"><img src="asset/food/1ashoka-halwa.jpg" alt=""><p data-key="food1">Ashoka Halwa</p></div>
+          <div class="food-item"><img src="asset/food/2Kaara-paniyaram.jpg" alt=""><p data-key="food2">Kara Paniyaram</p></div>
+          <div class="food-item"><img src="asset/food/3Beetroot-idyappam.jpeg" alt=""><p data-key="food3">Beetroot Idiyappam</p></div>
+          <div class="food-item"><img src="asset/food/4Keerai-adai.jpg" alt=""><p data-key="food4">Keera Adai</p></div>
+          <div class="food-item"><img src="asset/food/5Chappathi.jpeg" alt=""><p data-key="food5">Chapathi</p></div>
+          <div class="food-item"><img src="asset/food/6curd-rice.jpg" alt=""><p data-key="food6">Curd Rice</p></div>
+          <div class="food-item"><img src="asset/food/7Idly.jpeg" alt=""><p data-key="food7">Idly</p></div>
+          <div class="food-item"><img src="asset/food/8Masalla-paal.jpeg" alt=""><p data-key="food8">Masala Milk</p></div>
+        </div>
+      </div>
+
+      <!-- Reception Photos -->
+      <div class="event-content hidden" id="reception-photo-content">
+        <h2 id="reception-photo-title" data-key="reception-photos">Photos</h2>
+        <div class="photo-placeholder" style="text-align:center;margin:4em 0;">
+          <h3>Photo Gallery Coming Soon!</h3>
+          <p>Please visit this page after the reception is finished.<br>
+          We will try to add all the event photos here once they are ready.<br>
+          Thank you for your patience and excitement!</p>
+        </div>
+      </div>
+    </div>
   </div>
+
   <div id="audio-control-wrap">
     <audio id="bgMusic" autoplay loop>
       <source src="asset/AUD-20250816-WA0047.mp3" type="audio/mp3">
     </audio>
     <button id="muteButton" aria-label="Mute/Unmute">&#128266;</button>
   </div>
+
+  <div style="text-align:center; margin:3em 0 1.5em 0;">
+    <a href="engagement-memory/index.html" class="section-btn" data-key="engagement-memories" style="background:linear-gradient(135deg, #ff69b4, #d63384); color:white; padding:14px 28px; font-size:1.1em; border-radius:8px; text-decoration:none; display:inline-block; transition:all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(255,105,180,0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(255,105,180,0.3)';">💕 Engagement Memories</a>
+  </div>
+
   <div class="with-love" data-key="withlove">
     With love,<br>
     Kumar & Vijayalakshmi, Raveendran & Syamala

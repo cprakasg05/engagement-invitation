@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marriage - Photo Gallery</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="top-bar">
+    <button class="back-btn" onclick="window.location.href='index.html'" style="margin-left: 1rem;">← <span data-key="back">Back to Home</span></button>
+    <div class="style-badge">🏞️ KERALA STYLE 🏞️</div>
+    <div class="language-toggle">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('ta')">தமிழ்</button>
+      <button onclick="setLanguage('ml')">മലയാളം</button>
+    </div>
+  </div>
+
+  <div class="event-page-container">
+    <h1 data-key="marriage-event-title">📸 Marriage Moments 📸<br><span style="font-size: 0.7em; color: #d4af37;">🏞️ KERALA MEMORIES 🏞️</span></h1>
+    
+    <div class="page-nav-tabs">
+      <a href="marriage-venue.html" class="page-nav-tab" data-key="tab-venue">🏛️ Venue</a>
+      <a href="marriage-food.html" class="page-nav-tab" data-key="tab-food">🍽️ Food</a>
+      <a href="marriage-photo.html" class="page-nav-tab active" data-key="tab-photo">📸 Photos</a>
+    </div>
+
+    <div class="page-content">
+      <h2 id="marriage-photo-title" data-key="marriage-photos">Photos</h2>
+      <div class="photo-placeholder" style="text-align:center;margin:4em 0;">
+        <h3>Photo Gallery Coming Soon!</h3>
+        <p>Please visit this page after the marriage function is finished.<br>
+        We will try to add all the event photos here once they are ready.<br>
+        Thank you for your patience and excitement!</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="audio-control-wrap">
+    <audio id="bgMusic" autoplay loop>
+      <source src="asset/AUD-20250816-WA0047.mp3" type="audio/mp3">
+    </audio>
+    <button id="muteButton" aria-label="Mute/Unmute">&#128266;</button>
+  </div>
+
+  <div class="with-love" data-key="withlove">
+    With love,<br>
+    Kumar & Vijayalakshmi, Raveendran & Syamala
+  </div>
+</body>
+</html>
