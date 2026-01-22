@@ -55,9 +55,8 @@ const translations = {
     "reception-venue-date": "8th February 2026, From 11:00 AM onwards",
     "reception-food-title": "🍽️ Menu Highlights",
     "reception-photos": "Photos",
-    "reception-contact-1": "N. Kumar: 9159109955",
-    "reception-contact-2": "K. Chandraprakash: 9488003374",
-    "reception-contact-3": "Vijayalakshmi: 9159109955"
+    "reception-contact-1": "Kumar: 9488003374",
+    "reception-contact-2": "Chandraprakash: 7339646162"
   },
   ta: {
     name1: "சூரியபிரகாஷ்",
@@ -115,9 +114,8 @@ const translations = {
     "reception-venue-date": "பிப்ரவரி 8, 2026, காலை 11:00 மணி முதல்",
     "reception-food-title": "🍽️ மெனு சிறப்பம்சங்கள்",
     "reception-photos": "புகைப்படங்கள்",
-    "reception-contact-1": "திரு. N. குமார்: 9159109955",
-    "reception-contact-2": "K. சந்திரபிரகாஷ்: 9488003374",
-    "reception-contact-3": "விஜயலட்சுமி: 9159109955"
+    "reception-contact-1": "குமார்: 9488003374",
+    "reception-contact-2": "சந்திரபிரகாஷ்: 7339646162"
   },
   ml: {
     name1: "സൂര്യപ്രകാശ്",
@@ -173,9 +171,8 @@ const translations = {
     "reception-venue-date": "ഫെബ്രുവരി 8, 2026, രാവിലെ 11:00 മണി മുതൽ",
     "reception-food-title": "🍽️ മെനു ഹൈലൈറ്റ്സ്",
     "reception-photos": "ചിത്രങ്ങൾ",
-    "reception-contact-1": "N. കുമാർ: 9159109955",
-    "reception-contact-2": "K. ചന്ദ്രപ്രകാശ്: 9488003374",
-    "reception-contact-3": "വിജയലക്ഷ്മി: 9159109955"
+    "reception-contact-1": "കുമാർ: 9488003374",
+    "reception-contact-2": "ചന്ദ്രപ്രകാശ്: 7339646162"
   }
 };
 

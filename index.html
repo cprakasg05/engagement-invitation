@@ -47,6 +47,77 @@
       <p id="countdown"></p>
     </div>
 
+    <!-- SAVE THE DATE SECTION -->
+    <div style="text-align:center; margin:2.5em auto; max-width:500px;">
+      <button onclick="document.getElementById('saveTheDateSlideshow').style.display = document.getElementById('saveTheDateSlideshow').style.display === 'none' ? 'block' : 'none';" 
+              style="background:linear-gradient(135deg, #d4af37, #f5d76e); color:#0f2438; padding:18px 40px; font-size:1.3em; border-radius:50px; border:none; font-weight:700; box-shadow:0 6px 20px rgba(212,175,55,0.4); cursor:pointer; transition:all 0.3s ease;"
+              onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 25px rgba(212,175,55,0.6)';"
+              onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(212,175,55,0.4)';">
+        📅 Save The Date
+      </button>
+      
+      <!-- Slideshow Container -->
+      <div id="saveTheDateSlideshow" style="display:none; margin-top:2em; max-width:400px; margin-left:auto; margin-right:auto; border-radius:16px; overflow:hidden; box-shadow:0 12px 40px rgba(212,175,55,0.4); border:4px solid #d4af37; background:#fff; position:relative;">
+        <img id="slideshowImage" src="asset/save the date/LWC00039.jpg" alt="Save The Date" style="width:100%; display:block; cursor:pointer;" onclick="openFullscreen(this.src)">
+        <div style="position:absolute; bottom:10px; right:10px; background:rgba(15,36,56,0.8); color:#d4af37; padding:8px 16px; border-radius:20px; font-size:0.9em; font-weight:600;">
+          <span id="imageCounter">1 / 31</span>
+        </div>
+        <p style="margin-top:0.5em; color:#666; font-size:0.85em; text-align:center;">Click image to view fullscreen</p>
+      </div>
+      
+      <!-- Fullscreen Modal -->
+      <div id="fullscreenModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:9999; justify-content:center; align-items:center;" onclick="closeFullscreen()">
+        <button onclick="closeFullscreen()" style="position:absolute; top:20px; right:30px; background:rgba(255,255,255,0.2); color:#fff; border:2px solid #fff; border-radius:50%; width:50px; height:50px; font-size:1.5em; cursor:pointer; z-index:10000;">✕</button>
+        <a id="downloadBtn" download style="position:absolute; top:20px; left:30px; background:#d4af37; color:#0f2438; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:600; cursor:pointer; z-index:10000;">📥 Download</a>
+        <img id="fullscreenImage" src="" style="max-width:90%; max-height:90%; object-fit:contain;" onclick="event.stopPropagation()">
+      </div>
+      
+      <p style="margin-top:1em; color:#d4af37; font-size:0.95em; font-style:italic;">
+        ← Slideshow will appear here
+      </p>
+    </div>
+    
+    <script>
+      // Save The Date Slideshow
+      const saveTheDateImages = [
+        'LWC00039.jpg', 'LWC00076.jpg', 'LWC00181.jpg', 'LWC00231.jpg', 'LWC00241.jpg',
+        'LWC00301.jpg', 'LWC00326.jpg', 'LWC00333.jpg', 'LWC00354.jpg', 'LWC00397.jpg',
+        'LWC00539.jpg', 'LWC00554.jpg', 'LWC09207.jpg', 'LWC09277.jpg', 'LWC09328.jpg',
+        'LWC09352.jpg', 'LWC09423.jpg', 'LWC09445.jpg', 'LWC09452.jpg', 'LWC09506.jpg',
+        'LWC09519.jpg', 'LWC09546.jpg', 'LWC09609.jpg', 'LWC09617.jpg', 'LWC09699.jpg',
+        'LWC09719.jpg', 'LWC09755.jpg', 'LWC09929.jpg', 'LWC09947.jpg', 'LWC09973.jpg',
+        'LWC09999.jpg'
+      ];
+      let currentImageIndex = 0;
+      
+      setInterval(() => {
+        const slideshowElement = document.getElementById('saveTheDateSlideshow');
+        if (slideshowElement && slideshowElement.style.display !== 'none') {
+          currentImageIndex = (currentImageIndex + 1) % saveTheDateImages.length;
+          document.getElementById('slideshowImage').src = 'asset/save the date/' + saveTheDateImages[currentImageIndex];
+          document.getElementById('imageCounter').textContent = (currentImageIndex + 1) + ' / 31';
+        }
+      }, 5000); // Change image every 5 seconds
+      
+      // Fullscreen functions
+      function openFullscreen(imageSrc) {
+        document.getElementById('fullscreenImage').src = imageSrc;
+        document.getElementById('downloadBtn').href = imageSrc;
+        document.getElementById('fullscreenModal').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeFullscreen() {
+        document.getElementById('fullscreenModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+      
+      // Close on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeFullscreen();
+      });
+    </script>
+
     <!-- COUPLE STORY BUTTON -->
     <button class="story-toggle-btn" onclick="toggleStory()" data-key="view-story">
       📖 View Our Story
