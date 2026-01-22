@@ -60,7 +60,7 @@ const translations = {
     "reception-contact-3": "Vijayalakshmi: 9159109955"
   },
   ta: {
-    name1: "சுரியப்ரகாஷ்",
+    name1: "சூரியபிரகாஷ்",
     name2: "சிசிரா",
     couple: "ஜோடி கதை",
     "couple-story-title": "ஜோடி கதை",
@@ -88,9 +88,9 @@ const translations = {
     "venue-contact3": "குமார்: 9488003374",
     "venue-contact4": "சிசிரா: 9159109955",
     "event-marriage": "💍 திருமணம் - பிப் 1",
-    "event-reception": "🎉 விருந்து - பிப் 8",
+    "event-reception": "🎉 வரவேற்பு - பிப் 8",
     "event-marriage-text": "திருமணம்",
-    "event-reception-text": "விருந்து",
+    "event-reception-text": "வரவேற்பு",
     "view-story": "📖 எமது கதை பார்க்க",
     "tab-venue": "🏛️ இடம்",
     "tab-food": "🍽️ உணவு",
