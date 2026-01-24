@@ -1,6 +1,6 @@
 const translations = {
   en: {
-    name1: "Suriaprakash",
+    name1: "Suriyaprakash",
     name2: "Sisira",
     couple: "Couple Story",
     "couple-story-title": "Couple Story",

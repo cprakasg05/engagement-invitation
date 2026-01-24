@@ -22,7 +22,7 @@
   <div id="home-section" class="section active">
     <div class="hero">
       <div class="couple-stack">
-        <span class="couple-top" data-key="name1">Suriaprakash</span>
+        <span class="couple-top" data-key="name1">Suriyaprakash</span>
         <div class="heart-row">
           <span class="heart">
             <img src="asset/green-heart-arrow.png" alt="Green Heart with Arrow" class="beating-heart-img" style="width:2em;height:auto;vertical-align:middle;" />
@@ -58,7 +58,7 @@
       
       <!-- Slideshow Container -->
       <div id="saveTheDateSlideshow" style="display:none; margin-top:2em; max-width:400px; margin-left:auto; margin-right:auto; border-radius:16px; overflow:hidden; box-shadow:0 12px 40px rgba(212,175,55,0.4); border:4px solid #d4af37; background:#fff; position:relative;">
-        <img id="slideshowImage" src="asset/save the date/LWC00039.jpg" alt="Save The Date" style="width:100%; display:block; cursor:pointer;" onclick="openFullscreen(this.src)">
+        <img id="slideshowImage" src="asset/save-the-date/LWC00039.jpg" alt="Save The Date" style="width:100%; display:block; cursor:pointer;" onclick="openFullscreen(this.src)">
         <div style="position:absolute; bottom:10px; right:10px; background:rgba(15,36,56,0.8); color:#d4af37; padding:8px 16px; border-radius:20px; font-size:0.9em; font-weight:600;">
           <span id="imageCounter">1 / 31</span>
         </div>
@@ -78,15 +78,11 @@
     </div>
     
     <script>
-      // Save The Date Slideshow
+      // Save The Date Slideshow - Only 3 images
       const saveTheDateImages = [
-        'LWC00039.jpg', 'LWC00076.jpg', 'LWC00181.jpg', 'LWC00231.jpg', 'LWC00241.jpg',
-        'LWC00301.jpg', 'LWC00326.jpg', 'LWC00333.jpg', 'LWC00354.jpg', 'LWC00397.jpg',
-        'LWC00539.jpg', 'LWC00554.jpg', 'LWC09207.jpg', 'LWC09277.jpg', 'LWC09328.jpg',
-        'LWC09352.jpg', 'LWC09423.jpg', 'LWC09445.jpg', 'LWC09452.jpg', 'LWC09506.jpg',
-        'LWC09519.jpg', 'LWC09546.jpg', 'LWC09609.jpg', 'LWC09617.jpg', 'LWC09699.jpg',
-        'LWC09719.jpg', 'LWC09755.jpg', 'LWC09929.jpg', 'LWC09947.jpg', 'LWC09973.jpg',
-        'LWC09999.jpg'
+        'LWC00039.jpg', 
+        'LWC09352.jpg', 
+        'LWC09609.jpg'
       ];
       let currentImageIndex = 0;
       
@@ -94,8 +90,8 @@
         const slideshowElement = document.getElementById('saveTheDateSlideshow');
         if (slideshowElement && slideshowElement.style.display !== 'none') {
           currentImageIndex = (currentImageIndex + 1) % saveTheDateImages.length;
-          document.getElementById('slideshowImage').src = 'asset/save the date/' + saveTheDateImages[currentImageIndex];
-          document.getElementById('imageCounter').textContent = (currentImageIndex + 1) + ' / 31';
+          document.getElementById('slideshowImage').src = 'asset/save-the-date/' + saveTheDateImages[currentImageIndex];
+          document.getElementById('imageCounter').textContent = (currentImageIndex + 1) + ' / 3';
         }
       }, 5000); // Change image every 5 seconds
       
